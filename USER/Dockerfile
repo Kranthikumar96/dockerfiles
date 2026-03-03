@@ -1,5 +1,5 @@
 FROM almalinux:9
-RUN dnf install nginx -y
+RUN dnf install git -y
 RUN useradd kranthi
 USER kranthi
-CMD ["nginx","-g","daemon off;"]
+CMD ["ping","google.com"]
