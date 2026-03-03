@@ -1,7 +1,8 @@
-FROM almalinux:9
-ENV COURSE="DevOps" \
-    TRAINER="SIVA_KUMAR" \
-    DURATION="120HRS"
-ARG STUDENT="KRANTHI_KUMAR"
-RUN echo "Hi, Course is :${COURSE}, Trainer is :${TRAINER}, Duration is :${DURATION}, Student is :${STUDENT}"
-CMD ["sleep","1000"]
+ARG version
+FROM almalinux:${version:-9}
+ENV course="devops" \
+    duration="120hrs"
+ARG trainer="sivakumar"
+ENV trainer=$trainer
+RUN echo "Hi, Course is: ${course}, duration is: ${duration}, trainer is: ${trainer}, version: ${version}"
+CMD ["sleep", "1000"]
