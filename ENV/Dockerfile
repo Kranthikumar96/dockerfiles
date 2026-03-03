@@ -1,0 +1,6 @@
+FROM almalinux:9
+ENV COURSE="DevOps" \
+    TRAINER="SIVA_KUMAR" \
+    STUDENT="KRANTHI_KUMAR" \
+    DURATION="120HRS"
+CMD ["sleep","1000"]
