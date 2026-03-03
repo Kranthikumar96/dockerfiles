@@ -1,5 +1,5 @@
 FROM almalinux:9
-RUN useradd KRANTHI
+RUN useradd kranthi
 RUN dnf install nginx -y
-USER KRANTHI
+USER kranthi
 CMD ["nginx","-g","daemon off;"]
